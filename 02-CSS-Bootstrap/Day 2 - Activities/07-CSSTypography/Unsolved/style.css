@@ -1,0 +1,20 @@
+.p1 {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.p2 {
+  font-size: 24px;
+  line-height: 20px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.p3 {
+  line-height: 50px;
+  font-size: 30px;
+  font-family: serif;
+  font-weight: bold;
+}
