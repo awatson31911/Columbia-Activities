@@ -1,0 +1,70 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+
+.thought1 {
+  font-family: "Audiowide", cursive;
+}
+.thought2 {
+  font-family: "Black Ops One", cursive;
+}
+.thought3 {
+  font-family: "Barriecito", cursive;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+.link1 {
+  color: crimson;
+  font-size: 20px;
+}
+
+.link1:hover {
+  color: goldenrod;
+}
+
+.link1:focus {
+  color: cadetblue;
+}
+
+.link1:active {
+  font-size: 24px;
+}
+
+.link2 {
+  color: rgb(34, 34, 34);
+}
+.link2:hover {
+  color: rgb(113, 113, 113);
+}
+
+.link2:focus {
+  color: cadetblue;
+}
+
+.link2:active {
+  font-size: 24px;
+}
+
+.link3 {
+  color: rgb(73, 1, 73);
+}
+
+.link3:hover {
+  color: rgb(187, 137, 187);
+}
+
+.link3:focus {
+  color: cadetblue;
+}
+
+.link3:active {
+  font-size: 24px;
+}
