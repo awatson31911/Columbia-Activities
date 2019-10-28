@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    let eatSteak = confirm('Do you eat steak?');
+    let age;
+    if (eatSteak) {
+      document.write('Here\'s a steak sandwich!')
+    } else {
+      document.write('Here’s a Tofu Stir-Fry!')
+    }
+
+    age = prompt('How old are you? (Please enter a digit number)');
+
+    if (age >= 21) document.write('<hr>', 'How about some saki 🍶 ?');
+    else document.write('<hr>','No sake for you I\'m afraid!');
+  </script>
+</body>
+</html>
