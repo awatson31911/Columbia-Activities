@@ -35,26 +35,31 @@
       let grillCheeseCounter = 0;
       let roastBeefCounter = 0;
 
-      $('h3').each(sandwich => {
-        if (sandwich.id === 'pbj') {
-          alert('Nom Nom PB&J! 🥜');
-          pbjCounter++;
-          alert('You\'ve eaten ' + pbjCounter + 'PB&J sandwiches');
-        }
+      $('h3').each( function() {
 
-        if (sandwich.id === 'grilledcheese') {
-          alert('Nom Nom GRILLED CHEESE! 🍞🧀');
-          grillCheeseCounter++;
-          alert('You\'ve eaten ' + grillCheeseCounter + 'grilled cheese sandwiches');
+        $(this).on('click', () => {
+        
+          if (this.id === 'pbj') {
+            alert('Nom Nom PB&J! 🥜');
+            pbjCounter++;
+            alert('You\'ve eaten ' + pbjCounter + ' PB&J sandwiches');
+          }
 
-        }
+          if (this.id === 'grilledcheese') {
+            alert('Nom Nom GRILLED CHEESE! 🍞🧀');
+            grillCheeseCounter++;
+            alert('You\'ve eaten ' + grillCheeseCounter + ' grilled cheese sandwiches');
 
-        if (sandwich.id === 'roastbeef') {
-          alert('Nom Nom Roast Beef goodness! 🐮');
-          roastBeefCounter++;
-          alert('You\'ve eaten ' + roastBeefCounter + 'roast beef sandwiches');
+          }
 
-        }
+          if (this.id === 'roastbeef') {
+            alert('Nom Nom Roast Beef goodness! 🐮');
+            roastBeefCounter++;
+            alert('You\'ve eaten ' + roastBeefCounter + ' roast beef sandwiches');
+
+          }
+
+        })
 
       });
 
