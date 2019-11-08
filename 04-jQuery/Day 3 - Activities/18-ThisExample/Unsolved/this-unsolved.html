@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>This Example</title>
 </head>
+
 <body>
 
   <h1>Make sure to view the console to see the action!</h1>
@@ -12,14 +14,14 @@
 
     // EXAMPLE ONE:
     // --------------------------------------------------
-    // What is "this" going to print?
+    // What is "this" going to print? - Window object
 
     console.log(this);
 
 
     // EXAMPLE TWO:
     // --------------------------------------------------
-    // What is "this" going to print?
+    // What is "this" going to print? - Window object
 
     function myFunction() {
       console.log(this);
@@ -28,11 +30,11 @@
 
     // EXAMPLE THREE (IMPORTANT):
     // --------------------------------------------------
-    // What is "someObj.say()" going to print?
+    // What is "someObj.say()" going to print? - "Red Hat"
 
     var someObj = {
       name: "Red Hat",
-      say: function() {
+      say: function () {
         console.log(this.name);
       }
     };
@@ -42,13 +44,15 @@
     // EXAMPLE FOUR (BONUS, TRICKY!):
     // --------------------------------------------------
     // What is "myObj.yell()" going to print? Why?
+    // 1) myObj = {name: "Star Powerup", yell: function}
+    // changeName has no reference to myObj, it is called in the Window context
 
     var myObj = {
       name: "",
-      yell: function() {
+      yell: function () {
         this.name = "Star Powerup";
 
-        var changeName = function(newName) {
+        var changeName = function (newName) {
           this.name = newName;
         };
         changeName("Blue Shell");
@@ -61,16 +65,18 @@
     // EXAMPLE FIVE (BONUS, TRICKY!):
     // --------------------------------------------------
     // What is "myObj.yell()" going to print? Why?
+    // myObj = {name:"Blue Shell", yell: func}
+    // Reference to myObj is passed down to nameChange via thisObject
 
     var myObj = {
       name: "",
-      yell: function() {
+      yell: function () {
 
         // This line is important!
         var thisObject = this;
 
         this.name = "Star Powerup";
-        var changeName = function(newName) {
+        var changeName = function (newName) {
           thisObject.name = newName;
         };
         changeName("Blue Shell");
@@ -81,4 +87,5 @@
 
   </script>
 </body>
+
 </html>
