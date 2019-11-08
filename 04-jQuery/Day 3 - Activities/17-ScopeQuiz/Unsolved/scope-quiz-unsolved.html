@@ -12,34 +12,37 @@
     // 1. What is the difference (in output) between Situation 1 and Situation 2?
     // 2. Why are the alert messages different? (Hint: Look for syntax differences)
 
-    // Situation 1
+    // Situation 1 
     // ------------------------------------------
+        // In this situation, myVar1 get re-assigned to 2
     var myVar1 = 1;
 
     function a1() {
-      myVar1 = 5 - 3;
-      b1();
-      alert("Q1 | a: " + myVar1);
+      myVar1 = 5 - 3; // myVar1 = 2
+      b1(); //alerts myVar1 = 2
+      alert("Q1 | a: " + myVar1); // alerts myVar1 = 2
     }
 
     function b1() {
-      alert("Q1 | b: " + myVar1);
+      alert("Q1 | b: " + myVar1); //alerts myVar1 = 2
     }
     a1();
 
 
     // Situation 2
     // ------------------------------------------
+        // In this situation, myVar 2 never gets re-assigned. A new variable called myVar2 gets instantiated to 2 in a2's scope
+
     var myVar2 = 1;
 
     function a2() {
       var myVar2 = 5 - 3;
-      b2();
-      alert("Q2 | a: " + myVar2);
+      b2(); //alerts myVar2 = 1
+      alert("Q2 | a: " + myVar2); //alerts myVar2 = 2
     }
 
     function b2() {
-      alert("Q2 | b: " + myVar2);
+      alert("Q2 | b: " + myVar2); //alerts myVar2 = 1
     }
     a2();
 
