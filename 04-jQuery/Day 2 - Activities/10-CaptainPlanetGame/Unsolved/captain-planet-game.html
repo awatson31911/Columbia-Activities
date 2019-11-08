@@ -172,18 +172,16 @@
       $(".clone-button").on("click", function () {
         const newCap = captainPlanet.clone(true);
         newCap.attr("id", `captain-planet-${numClones}`);
-
-        captainPlanet.parent().append(newCap);
         numClones++;
+        captainPlanet.parent().append(newCap);
 
         const position = newCap.prev().height() * numClones;
         newCap.css("top", "+=" + position);
-        console.log(numClones)
       });
 
       $(".unclone-button").on("click", function () {
-        $(`#captain-planet-${numClones}`).remove();
         numClones = numClones-- ? numClones-- : 0;
+        $(`#captain-planet-${numClones}`).remove();
         console.log(numClones)
       });
 
