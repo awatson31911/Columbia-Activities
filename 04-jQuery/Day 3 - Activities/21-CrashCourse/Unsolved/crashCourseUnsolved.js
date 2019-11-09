@@ -25,7 +25,7 @@
 // 3. FOR LOOPS
 // ==========================================================
 
-// Create a for loop that loops through and prints "My name is Bob five times"
+// Create a for loop that loops through and prints "My name is Bob" five times
 
 
 
