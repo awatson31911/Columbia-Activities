@@ -67,3 +67,40 @@ var unsortedArr = [
   292, 332, 209, 244, 196, 179, 472, 279, 40, 486, 270, 185,
   181, 485, 495, 81, 169, 294, 79, 400, 92, 104, 249
 ];
+
+function bubbleSort(array) {
+  let hasSwaps = true;
+
+  while (hasSwaps) {
+    hasSwaps = false;
+
+    for (let index = 0; index < array.length -1; index++) {
+      const num = array[index];
+      const nextNum = array[index + 1];
+      console.log(index, num, index+ 1, nextNum )
+      if (num > nextNum) {
+        swap(index, index + 1);
+        hasSwaps = true;
+      }
+    }
+
+  }
+
+  function swap(idx1, idx2) {
+    let temp = array[idx1];
+    array[idx1] = array[idx2];
+    array[idx2] = temp;
+  }
+
+}
+
+
+document.getElementById('start').textContent = unsortedArr;
+document.getElementById('go').addEventListener('click', function () {
+  const sortedDiv = document.getElementById('result');
+  bubbleSort(unsortedArr);
+  const sortedArray = unsortedArr;
+  sortedDiv.textContent = sortedArray;
+  console.log(sortedArray)
+})
+
